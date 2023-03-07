@@ -23,7 +23,7 @@ export function Title({ ...rest }) {
   }, []);
 
   return (
-    <h2 ref={comp} className="text-7xl md:text-9xl text-center space-x-4">
+    <h2 ref={comp} className="text-7xl whitespace-nowrap md:text-9xl text-center space-x-4">
       <span className="gsap-title-head inline-block text-orange-500 drop-shadow-2xl">
         GoD
       </span>

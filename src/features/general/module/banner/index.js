@@ -1,7 +1,7 @@
 import React from "react";
 import backgroundImage from "assets/images/rotmg-wall-1.png";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { AnimateTitle, Title } from "./title";
+import { Title } from "./title";
 import { Subtitle } from "./subtitle";
 
 export function Banner({ onGoDown }) {
