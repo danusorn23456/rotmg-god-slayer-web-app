@@ -1,15 +1,45 @@
+import {
+  PATH_ROTMG_NEWS,
+  PATH_HOME_PAGE,
+  PATH_MEMBERS_PAGE,
+  PATH_DISCORD_INVITE,
+} from "constraint";
 import React from "react";
 
 export function MainLayout({ children, ...rest }) {
+  const links = [
+    {
+      href: PATH_HOME_PAGE,
+      label: "Home",
+    },
+    {
+      href: PATH_ROTMG_NEWS,
+      label: "News",
+    },
+    {
+      href: PATH_MEMBERS_PAGE,
+      label: "Members",
+    },
+    {
+      href: PATH_DISCORD_INVITE,
+      label: "Discord",
+    },
+  ];
+
   return (
     <div className="flex flex-col w-full">
-      <div className="absolute w-full z-10 bg-black">
-          <div className="flex space-x-4 p-2">
-            <a href="/" className="text-white text-2xl">Home</a>
-            <a href="https://remaster.realmofthemadgod.com/?page_id=15" rel="noreferrer" target="_blank" className="text-white text-2xl">News</a>
-            <a href="/member" className="text-white text-2xl">Members</a>
-            <a href="https://discord.gg/reUJxHF83M" rel="noreferrer" target="_blank" className="text-white text-2xl">Discord</a>
-          </div>
+      <div className="fixed top-0 left-0 w-full z-10 bg-black">
+        <div className="flex space-x-4 p-2">
+          {links.map(({ label, ...rest }, idx) => (
+            <a
+              key={idx}
+              {...rest}
+              className="text-white text-2xl duration-150 hover:text-red-500"
+            >
+              {label}
+            </a>
+          ))}
+        </div>
       </div>
       <main className="z-0">{children}</main>
     </div>
