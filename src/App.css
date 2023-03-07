@@ -9,6 +9,17 @@
     font-weight: bold;
 }
 
+@font-face {
+    font-family: "EightBitDragon-anqx";
+    src: local("EightBitDragon-anqx"),
+     url("./assets/fonts/EightBitDragon-anqx.ttf") format("truetype");
+    font-weight: bold;
+}
+
+.font-8bit{
+    font-family: "EightBitDragon-anqx" !important;
+}
+
 *{
     margin: 0;
     padding: 0;
