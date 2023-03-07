@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const realm = axios.create({
-  baseURL: "https://realmeye-api.glitch.me/",
+  baseURL: "http://localhost:8000/",
   timeout: 1000,
 });
 
