@@ -1,6 +1,6 @@
-import { PATH_MEMBERS_PAGE } from "constraint";
+import { PATH_DEV_PAGE, PATH_MEMBERS_PAGE } from "constraint";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { HomePage, MembersPage } from "../pages";
+import { DevPage, HomePage, MembersPage } from "../pages";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +13,10 @@ const router = createBrowserRouter([
       {
         path:PATH_MEMBERS_PAGE,
         element:<MembersPage/>
+      },
+      {
+        path:PATH_DEV_PAGE,
+        element:<DevPage/>
       }
     ],
   },
