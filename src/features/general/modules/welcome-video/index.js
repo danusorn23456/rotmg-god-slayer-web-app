@@ -1,7 +1,7 @@
 
 import { ParticleArea, ResponsiveBox } from "components";
 import React, { useCallback, useState } from "react";
-import snowImage from "assets/images/snow.png";
+import snowImage from "assets/images/popo.png";
 import { MediaPlayer } from "./media-player";
 
 export function WelcomeVideo({ ...rest }) {

@@ -23,7 +23,7 @@ export function ScreenLoading({
           tl.to(".gsap-square-" + idx, {
             opacity: 1,
             duration:0.3,
-          });
+          })
           tl.to(".gsap-square-" + idx, {
             opacity: 0.3,
             duration:0.0,
