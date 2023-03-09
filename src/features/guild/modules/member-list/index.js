@@ -3,10 +3,11 @@ import { useGetGuild } from "features/guild/hooks";
 import React, { useEffect, useRef } from "react";
 import { CharacterInfo } from "./character-info";
 import gsap from "gsap";
+import { ScreenLoading } from "components";
 
 export function MemberList({ ...rest }) {
   const comp = useRef();
-  const { data } = useGetGuild({ name: OUR_GUILD });
+  const { data, isLoading } = useGetGuild({ name: OUR_GUILD });
 
   useEffect(() => {
     if (!data) {
@@ -27,8 +28,12 @@ export function MemberList({ ...rest }) {
       );
     }, comp);
 
-    return () => ctx.revert(); // cleanup
+    return () => ctx.revert();
   }, [data]);
+
+  if(!data && isLoading){
+    return <ScreenLoading title="Hold up while we load giga chade member"/>
+  }
 
   return (
     <div
