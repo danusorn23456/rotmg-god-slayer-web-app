@@ -29,7 +29,7 @@ export function MainLayout({ children, ...rest }) {
   return (
     <div className="flex flex-col w-full">
       <div className="fixed top-0 left-0 w-full z-10 bg-black">
-        <div className="flex space-x-4 p-4">
+        <div className="flex space-x-4 h-16 px-4 items-center">
           {links.map(({ label, ...rest }, idx) => (
             <a
               key={idx}
@@ -41,7 +41,7 @@ export function MainLayout({ children, ...rest }) {
           ))}
         </div>
       </div>
-      <main className="z-0">{children}</main>
+      <main className="z-0 pt-16">{children}</main>
     </div>
   );
 }
