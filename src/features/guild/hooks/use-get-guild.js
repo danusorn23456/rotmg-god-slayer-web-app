@@ -6,7 +6,7 @@ export function useGetGuild(payload) {
 
   async function queryFn() {
     return await apiGetGuild(payload).then((res) => {
-      return res.data[0];
+      return res.data;
     });
   }
 
